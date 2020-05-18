@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p",
     "lint": "eslint src/*.js",
-    "build-css": "node-sass src/index.scss src/index.css"
+    "build-css": "node-sass src/index.scss src/index.css",
+    "start": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",

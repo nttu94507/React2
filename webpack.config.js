@@ -18,7 +18,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.css$/,
+                test: /\.(scss)$/,
                 use: [
                   {
                     loader: MiniCssExtractPlugin.loader,
@@ -29,6 +29,9 @@ module.exports = {
                       modules: { localIdentName: '[name]__[local]___[hash:base64:5]' },
                     },
                   },
+                  {
+                    loader:'sass-loader',
+                  }
                 ],
             },
         ],

@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import ReactDom from 'react-dom';
 import Styles from './index.scss';
 
 
+const Main = () =>{
+    const [count, setCount] = useState(0)
+    return (
+        <>
+            <h1 className={Styles.main}>{count}</h1>
+            <button type="button"onClick={()=>{setCount(count + 1)}} >點我</button>
+        </>
+    )
+} 
     
 const HelloWorld = (props) => {
     const { names } = props;
@@ -24,4 +33,4 @@ const HelloWorld = (props) => {
 }
 
 
-ReactDom.render(<HelloWorld names={['World', 'Air','', 'Sun','Water']}/>, document.getElementById('root'));
+ReactDom.render(<Main/> , document.getElementById('root'));

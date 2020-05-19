@@ -1,10 +1,15 @@
-import React, { useState }  from 'react';
+import React, { useState,useEffect }  from 'react';
 import ReactDom from 'react-dom';
 import Styles from './index.scss';
 
-
-const Main = () =>{
+ 
+const Counter = () =>{
     const [count, setCount] = useState(0)
+    useEffect(() => {
+        return () => {
+            console.log('cpmponent 移除後')
+        }
+    },[])
     return (
         <>
             <h1 className={Styles.main}>{count}</h1>
@@ -12,6 +17,19 @@ const Main = () =>{
         </>
     )
 } 
+
+const Main = () =>{
+    const[hiddenCounter, setHiddenCounter] = useState(false)
+    return (
+        <>
+            <button type="button" onClick={() => {
+                setHiddenCounter(!hiddenCounter);}}>
+                關閉計數器
+            </button>
+            {hiddenCounter ? null:<Counter />}
+        </>
+    )
+}
     
 const HelloWorld = (props) => {
     const { names } = props;

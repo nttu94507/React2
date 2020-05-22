@@ -31,11 +31,26 @@ const Main = () => {
     return(
         <div>
             <span>{`代辦事項數:${todolist.length}`}</span>
-            <Todolist todolist={todolist} />
+            <TodoListPage todolist={todolist} />
+            <CurrenTask todolist={todolist} />
         </div> 
     )
 }
 
+const TodoListPage = (props) =>{
+    const { todolist } = props
+    return (
+        <div>
+            <div>其他內容</div>
+            <Todolist todolist={todolist}/>
+        </div>
+    )
+}
+
+const CurrenTask = (props) => {
+    const { todolist } = props
+return <div>{`下一件事情:${todolist[0]}`}</div>
+}
 
 // const Counter = () =>{
 //     const [count, setCount] = useState(0)

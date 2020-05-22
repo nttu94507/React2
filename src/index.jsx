@@ -1,7 +1,10 @@
-import React, { useState,useEffect }  from 'react';
+import React, {useState,useEffect,createContext,useContext}  from 'react';
 import ReactDom from 'react-dom';
 import Styles from './index.scss';
 import PropTypes from 'prop-types';
+
+
+const TodoListContext = createContext();
 
 
 const Task = (props) => {
@@ -17,8 +20,8 @@ Task.defailtProps = {
     task: '',
 }
 
-const Todolist = (props) => {
-    const{todolist} = props
+const Todolist = () => {
+    const todolist = useContext(TodoListContext)
     return todolist.map(task => (
         <ul key={task}>
             <Task task={task} />
@@ -29,90 +32,30 @@ const Todolist = (props) => {
 const Main = () => {
     const [todolist] = useState(['first','second',"1"])
     return(
-        <div>
-            <span>{`代辦事項數:${todolist.length}`}</span>
-            <TodoListPage todolist={todolist} />
-            <CurrenTask todolist={todolist} />
-        </div> 
+        <TodoListContext.Provider value={todolist}>
+            <div>
+                <span>{`代辦事項數:${todolist.length}`}</span>
+                <TodoListPage  />
+                <CurrenTask  />
+            </div> 
+        </TodoListContext.Provider>
     )
 }
 
-const TodoListPage = (props) =>{
-    const { todolist } = props
+const TodoListPage = () =>{
     return (
         <div>
             <div>其他內容</div>
-            <Todolist todolist={todolist}/>
+            <Todolist />
         </div>
     )
 }
 
-const CurrenTask = (props) => {
-    const { todolist } = props
+const CurrenTask = () => {
+    const  todolist  = useContext(TodoListContext)
 return <div>{`下一件事情:${todolist[0]}`}</div>
 }
 
-// const Counter = () =>{
-//     const [count, setCount] = useState(0)
-//     useEffect(() => {
-//         return () => {
-//             console.log('cpmponent 移除後')
-//         }
-//     },[])
-//     return (
-//         <>
-//             <h1 className={Styles.main}>{count}</h1>
-//             <button type="button"onClick={()=>{setCount(count + 1)}} >點我</button>
-//         </>
-//     )
-// } 
-
-// const Main = () =>{
-//     const[hiddenCounter, setHiddenCounter] = useState(false)
-//     return (
-//         <>
-//             <button type="button" onClick={() => {
-//                 setHiddenCounter(!hiddenCounter);}}>
-//                 關閉計數器
-//             </button>
-//             {hiddenCounter ? null:<Counter />}
-//         </>
-//     )
-// }
-    
-// const HelloWorld = (props) => {
-//     const { names } = props;
-//     const isEmpty = value => value === ''
-    
-//     return (
-//         <div
-//             key={name}
-//             className={
-//                 `${Styles.mainBackground} 
-//                 ${isEmpty(name) ? '' : (Styles.main)}`
-//             }
-//             style={{
-//                 'font-size': 28,
-//             }}
-//             > 
-//             {names.map(name=>(
-//                 <div
-//                     key={name}
-//                     classname={isEmpty(name) ? '' : Styles.Main}    
-//                 >
-//                     {`Hello ${isEmpty(name) ? 'World' : name}!`} 
-//                 </div>
-//             ))}
-//         </div>
-//     )
-// };
-// HelloWorld.propTypes = {
-//     names: PropTypes.arrayOf(PropTypes.string),
-//   };
-
-//   HelloWorld.defaultProps = {
-//     names: ['Default string'],
-//   };
 
 
 ReactDom.render(<Main /> , document.getElementById('root'));

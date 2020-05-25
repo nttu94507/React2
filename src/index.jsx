@@ -2,8 +2,9 @@ import React, {useState,useEffect,createContext,useContext}  from 'react';
 import ReactDom from 'react-dom';
 import Styles from './index.scss';
 import PropTypes from 'prop-types';
-import {Provider, useSelector} from 'react-redux'
+import {Provider, useSelector,useDispatch} from 'react-redux'
 import store from './store'
+import { addTodo } from './action/todolist';
 
 
 const TodoListContext = createContext();
@@ -33,11 +34,16 @@ const Todolist = () => {
 }
 
 const Main = () => {
-    // const [todolist] = useState(['first','second',"1"])
+    const dispatch = useDispatch()
     const todolist = useSelector(state => state.todolist)
+    const [newTodo, setNewTodo] = useState('')
     return(
             <div>
                 <span>{`代辦事項數:${todolist.length}`}</span>
+                <div>
+                    <input value={newTodo} onChange={(e) => {setNewTodo(e.target.value),console.log(newTodo)}} />
+                    <button type="button" onClick={() => {dispatch(addTodo(newTodo)),console.log(newTodo)}}>新增事項</button>
+                </div>
                 <TodoListPage  />
                 <CurrenTask  />
             </div> 

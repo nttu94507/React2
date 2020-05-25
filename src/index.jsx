@@ -41,8 +41,8 @@ const Main = () => {
             <div>
                 <span>{`代辦事項數:${todolist.length}`}</span>
                 <div>
-                    <input value={newTodo} onChange={(e) => {setNewTodo(e.target.value),console.log(newTodo)}} />
-                    <button type="button" onClick={() => {dispatch(addTodo(newTodo)),console.log(newTodo)}}>新增事項</button>
+                    <input value={newTodo} onChange={(e) => {setNewTodo(e.target.value)}} />
+                    <button type="button" onClick={() => {dispatch(addTodo(newTodo))}}>新增事項</button>
                 </div>
                 <TodoListPage  />
                 <CurrenTask  />

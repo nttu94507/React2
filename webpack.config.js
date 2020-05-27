@@ -45,4 +45,8 @@ module.exports = {
       contentBase:'./dist',
       port: 9000
     },
+    resolve: { 
+      extensions: 
+      ['.js', '.jsx'] 
+    },
 };

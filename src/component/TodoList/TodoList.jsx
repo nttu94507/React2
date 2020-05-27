@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { addTodo } from '../../action/todolist';
 
-
 const Task = (props) => {
     const { task } = props
     return <div>{task}</div>

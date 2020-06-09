@@ -4,12 +4,18 @@ import {Provider} from 'react-redux'
 import store from './store'
 import Content from './component/Content';
 import TodoList from './component/TodoList';
-// import { Switch, Route,Link,HashRouter, BrowserRouter} from 'react-router-dom';
+import { Route, Switch,Link,BrowserRouter,HashRouter} from 'react-router-dom';
+
 
 const Main = () => (
     <div>
-        <Content />
-        <TodoList />
+        <Link to="/">首頁</Link>
+        <Link to="/todolist">待辦事項</Link>
+        <hr></hr>
+        <Switch>
+            <Route exact path="/" component ={Content}/>
+            <Route  path="/todolist" component ={TodoList}/>
+        </Switch>
     </div>
 )
-ReactDom.render(<Provider store={store}><Main /></Provider> , document.getElementById('root'));
+ReactDom.render(<Provider store={store}><HashRouter><Main /></HashRouter></Provider> , document.getElementById('root'));

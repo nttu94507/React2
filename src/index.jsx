@@ -5,6 +5,8 @@ import store from './store'
 import Content from './component/Content';
 import TodoList from './component/TodoList';
 import { Route, Switch,Link,BrowserRouter,HashRouter} from 'react-router-dom';
+import List from './component/List';
+
 
 
 const Main = () => (
@@ -15,6 +17,7 @@ const Main = () => (
         <Switch>
             <Route exact path="/" component ={Content}/>
             <Route  path="/todolist" component ={TodoList}/>
+            <Route  path="/list/:taskName" component ={List}/>
         </Switch>
     </div>
 )

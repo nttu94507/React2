@@ -6,7 +6,13 @@ import { addTodo } from '../../action/todolist';
 
 const Task = (props) => {
     const { task } = props
-    return <div>{task}</div>
+    return (
+        <li>
+         <Link to={`/list/${task}`}>
+             {task}
+         </Link>
+        </li>
+    )
 }
 
 Task.PropTypes ={

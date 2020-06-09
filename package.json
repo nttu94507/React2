@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p",
     "lint": "eslint src/*.js",
     "build-css": "node-sass src/index.scss src/index.css",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -27,6 +27,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "jest": "^26.0.1",
     "mini-css-extract-plugin": "^0.9.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",

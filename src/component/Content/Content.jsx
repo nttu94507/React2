@@ -7,11 +7,15 @@ const Content = () => {
     const dispatch = useDispatch();
     const data = useSelector(state => state.data);
     return (
-      <div>
-        <div>
+      <div data-testid="contentBlock">
+        <div data-testid="contentData">
           {data ? JSON.stringify(data) : '暫無資料'}
         </div>
-        <button type="button" onClick={() => { dispatch(fetchDataBegin()); }}>
+        <button 
+          type="button" 
+          onClick={() => { dispatch(fetchDataBegin()); }}
+          data-testid="fetchContentDataBtn"
+        >
           獲得資料
         </button>
       </div>

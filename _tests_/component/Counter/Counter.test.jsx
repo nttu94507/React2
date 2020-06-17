@@ -1,5 +1,5 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+import { render, fireEvent } from '@testing-library/react'
 import { toBeInTheDocument } from '@testing-library/jest-dom'
 import Counter from '../../../src/component/Counter'
 
@@ -7,6 +7,10 @@ import Counter from '../../../src/component/Counter'
 describe('Counter',()=>{
     test('counter_Click_AddCount',()=>{
         const {getByTestId} = render(<Counter />)
-        expect(getByTestId('counterBlock')).toBeInTheDocument()
+        expect(getByTestId('counter').textContent).toBe('0')
+
+        const addCountBtn = getByTestId('addCountBtn')
+        fireEvent.click(addCountBtn)
+        expect(getByTestId('counter').textContent).toBe('1')
     })
 })

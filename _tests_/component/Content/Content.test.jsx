@@ -25,7 +25,6 @@ describe('Content', ()=> {
         expect(getByTestId('contentBlock')).toBeInTheDocument()
     })
     test('Content_Click_ExecuteDispath', () =>{
-        
         const mockDispatch = jest.fn();
         const mockUseDispatch = jest.spyOn(ReactRedux, 'useDispatch')
         mockUseDispatch.mockReturnValue(mockDispatch);
@@ -34,4 +33,10 @@ describe('Content', ()=> {
         fireEvent.click(fetchContentDataBtn);
         expect(mockDispatch.mock.calls[0][0]).toEqual({ type: 'FETCH_DATA_BEGIN' });
     })
+    test('Content_Render_ContentData', () => {
+        const testInitState = { data: { test: 'test' } };
+        const { getByTestId } = generateComponent(<Content />, testInitState);
+        const contentBlock = getByTestId('contentData');
+        expect(contentBlock.textContent).toBe(JSON.stringify(testInitState.data));
+      });
 })

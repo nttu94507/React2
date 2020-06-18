@@ -9,18 +9,27 @@ import * as ReactRedux from 'react-redux';
 
 const { Provider } = ReactRedux;
 
+const generateComponent = (component,initState) => {
+    const store = createStore(reducer,initState);
+    return render(
+      <Provider store={store}>
+        {component}
+      </Provider>,
+    );
+  };
+  
+
 describe('Content', ()=> {
     test('Contest_Check_Render', () =>{
-        const store = createStore(reducer);
-        const {getByTestId} = render(<Provider store={store} ><Content /></Provider>)
+        const { getByTestId } = generateComponent(<Content />)
         expect(getByTestId('contentBlock')).toBeInTheDocument()
     })
     test('Content_Click_ExecuteDispath', () =>{
-        const store = createStore(reducer);
+        
         const mockDispatch = jest.fn();
         const mockUseDispatch = jest.spyOn(ReactRedux, 'useDispatch')
         mockUseDispatch.mockReturnValue(mockDispatch);
-        const {getByTestId} = render(<Provider store={store} ><Content /></Provider>)
+        const {getByTestId} = generateComponent(<Content />)
         const fetchContentDataBtn = getByTestId('fetchContentDataBtn');
         fireEvent.click(fetchContentDataBtn);
         expect(mockDispatch.mock.calls[0][0]).toEqual({ type: 'FETCH_DATA_BEGIN' });

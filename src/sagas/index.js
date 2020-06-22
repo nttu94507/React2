@@ -1,9 +1,9 @@
 import { all } from 'redux-saga/effects';
-import toodlistSaga from '../action/todolist';
+import cotentSaga from './content';
 
 function* rootSaga() {
     yield all([
-      toodlistSaga(),
+      cotentSaga(),
     ]);
   }
   

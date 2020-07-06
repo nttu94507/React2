@@ -11,5 +11,8 @@ describe('todolist sagas', () =>{
         
         const successGetData = generator.next('mockResponse').value;
         expect(successGetData).toEqual(put(fetchDataSuccess('mockResponse')))
+
+        const victoryGetData = generator.next().done
+        expect(victoryGetData).toEqual(true)
     })
 })

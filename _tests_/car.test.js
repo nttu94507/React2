@@ -21,8 +21,6 @@ describe('addProdToCar', () => {
   // });
   test('check_add_prod', () => {
     const newCar = car.addProdToCar('apple', 3);
-    expect(uuid).toHaveBeenCalled();
-    expect(getCurrentCarSpy).toHaveBeenCalled();
     expect(newCar).toEqual(
       [{ id: '9999', name: 'apple', count: 3 }],
     );

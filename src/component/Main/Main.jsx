@@ -6,7 +6,7 @@ import {List} from '../List'
 import {Redirect} from '../Redirect'
 
 const Main =() =>(
-    <div>
+    <div data-testid="contentBlock">
         <ul>
             <li><Link to='/'>首頁</Link></li>
             <li><Link to='/todolist'>待辦事項</Link></li>

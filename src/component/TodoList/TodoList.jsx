@@ -32,15 +32,15 @@ const Todolist = () => {
     ))
 }
 
-const Main = () => {
+const todo = () => {
     const dispatch = useDispatch()
     const todolist = useSelector(state => state.todolist)
     const [newTodo, setNewTodo] = useState('')
     return(
-            <div>
+            <div data-testid="todolistBlock">
                 <span>{`代辦事項數:${todolist.length}`}</span>
                 <div>
-                    <input value={newTodo} onChange={(e) => {setNewTodo(e.target.value)}} />
+                    <input value={newTodo} onChange={(e) => {setNewTodo(e.target.value)}} data-testid="todolistinput"/>
                     <button type="button" onClick={() => {dispatch(addTodo(newTodo))}}>新增事項</button>
                 </div>
                 <TodoListPage  />
@@ -64,4 +64,4 @@ const CurrenTask = () => {
     return <div>{`下一件事情:${todolist[0]}`}</div>
 }
 
-export default Main
+export default todo

@@ -1,7 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
-    entry:['@babel/polyfill',"./src/index.jsx"],
+    entry:['@babel/polyfill',"./src/index.tsx"],
     output: {
         filename:'bundle.js',
         path:path.resolve(__dirname,'./dist/'),
@@ -9,11 +9,20 @@ module.exports = {
     module:{
         rules:[
             {
-                test:  /.jsx$/,
+              test: /.ts$/,
+              use: {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['@babel/typescript', '@babel/preset-env'],
+                },
+              },
+            },
+            {
+                test:  /.tsx$/,
                 use:{
                     loader: 'babel-loader',
                     options:{
-                        presets: ['@babel/preset-env','@babel/preset-react'],
+                        presets: ['@babel/preset-env','@babel/preset-react','@babel/typescript'],
                     },
                 },
             },
@@ -47,6 +56,6 @@ module.exports = {
     },
     resolve: { 
       extensions: 
-      ['.js', '.jsx'] 
+      ['.js', '.jsx', '.ts' , '.tsx'] 
     },
 };

@@ -9,7 +9,8 @@
     "build-css": "node-sass src/index.scss src/index.css",
     "start": "webpack-dev-server",
     "test": "jest",
-    "test-cov": "jest --coverage"
+    "test-cov": "jest --coverage",
+    "tsm": "tsm src --watch"
   },
   "keywords": [],
   "author": "",
@@ -41,6 +42,7 @@
     "mini-css-extract-plugin": "^0.9.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
+    "typed-scss-modules": "^2.0.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"

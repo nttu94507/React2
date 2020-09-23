@@ -1,10 +1,11 @@
 import React from 'react'
+import styles from '../../index.scss'
 
 const About =() => {
     return(
-    <div className="zone">
-    <div className="resume">
-        <div className="left">
+    
+    <div className={`${styles.resume} ${styles.zone}`}>
+        <div className={styles.left}>
             <h1>傅昱智</h1>
             <h4>飛泓科技 | 技術服務工程師</h4>
             <hr />
@@ -75,7 +76,7 @@ const About =() => {
             </div>
         </div>
 
-        <div className="right">
+        <div className={styles.right}>
     <div className="decoration"></div>
     <div className="block">
       <h4>Exprience /Work</h4>
@@ -123,7 +124,7 @@ const About =() => {
     </div>
   </div>
     </div>
-</div>
+
 
 
 

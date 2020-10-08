@@ -11,7 +11,7 @@
       // max-width:1500px;
       padding:50px;
       display:flex;
-      // justify-content:center;
+      justify-content:center;
       background-color: #4F9D9D;
       //#FF9966
       color:rgba(255,255,255,0.95);
@@ -101,4 +101,47 @@
       position: absolute;
       right: 0;
       top: 50px;
+    }
+
+    .listExperience>li {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    
+    .listExperience li ul{
+      padding-left: 10px;
+      margin-left: 10px;
+      border-left: 4px solid white;
+    }
+    
+    .circle{
+      width: 50px;
+      height: 50px;
+      background-color: #fff;
+      border-radius :50% ;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .p90,.p180,.p270,.p360{
+      width: 50%;
+      height: 50%;
+      position: absolute;
+      left:50%;
+      top: 0;
+      background-color: #FF7168;
+    }
+
+    .p180{
+      top: 50%;
+    }
+
+    .p270{
+      left: 0;
+      top: 50%;
+    }
+
+    .p360{
+      left: 0;
+      top: 0;
     }

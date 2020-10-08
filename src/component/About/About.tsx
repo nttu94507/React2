@@ -10,65 +10,76 @@ const About =() => {
             <h4>飛泓科技 | 技術服務工程師</h4>
             <hr />
             <p>天意照炯，我自獨行，天地雖不容我，心安即是歸處</p>
-            <div className="buttons">
-            <a className="btn fill" href="https://github.com/nttu94507" target="_blank" >作品集</a>
-            <a className="btn" href="https://github.com/nttu94507" target="_blank" >Github</a>
+            <div className={styles.buttons}>
+            <a className={`${styles.btn} ${styles.fill}`} href="https://github.com/nttu94507" target="_blank" >作品集</a>
+            <a className={styles.btn} href="https://github.com/nttu94507" target="_blank" >Github</a>
             </div>
-            <div className="block">
+            <div className={styles.block}>
             <h4>Skills</h4>
             <h2>專業技能</h2>
-            <ul className="listSkill">
+            <ul className={styles.listSkill}>
                 <li>
-                <div className="circle"></div>
+                <div className={styles.circle}>
+                  <div className={styles.p90}></div>
+                </div>
                 前端網頁開發(html/css/js)
                 </li>
                 <li>
-                <div className="circle"></div>
+                <div className={styles.circle}>
+                  <div className={styles.p90}></div>
+                  <div className={styles.p180}></div>
+                </div>
                 網站環境建置(Linux/Windows)
                 </li>
                 <li>
-                <div className="circle"></div>
+                <div className={styles.circle}>
+                  <div className={styles.p90}></div>
+                  <div className={styles.p180}></div>
+                  <div className={styles.p270}></div>
+                </div>  
                 後端網頁(Laravel)
                 </li>
                 <li>
-                <div className="circle"></div>
+                <div className={styles.circle}>
+                <div className={styles.p360}></div>
+                </div>
                 網路規劃(CCNA)
                 </li>
                 <li>
-                <div className="circle"></div>
+                <div className={styles.circle}></div>
                 網站品質測試(QA)
                 </li>
                 <li>
-                <div className="circle"></div>
+                <div className={styles.circle}></div>
                 前端框架(React.js)
                 </li>
                 <li>
-                <div className="circle"></div>
+                <div className={styles.circle}></div>
                 程式問題修復及追蹤
                 </li>
             </ul>
-            <div className="block">
+            <div className={styles.block}>
                 <h4>programming Skill</h4>
                 <h2>程式技能</h2>
-                <ul className="listProgram">
+                <ul className={styles.listProgram}>
                 <li>PHP
-                    <div className="bar">
-                    <div className="vlaue"></div>
+                    <div className={styles.bar}>
+                    <div className={styles.vlaue}></div>
                     </div>
                 </li>
                 <li>python
-                    <div className="bar">
-                    <div className="vlaue"></div>
+                    <div className={styles.bar}>
+                    <div className={styles.vlaue}></div>
                     </div>
                 </li>
                 <li>html/css/js
-                    <div className="bar">
-                    <div className="vlaue"></div>
+                    <div className={styles.bar}>
+                    <div className={styles.vlaue}></div>
                     </div>
                 </li>
                 <li>CCNA
-                    <div className="bar">
-                    <div className="vlaue"></div>
+                    <div className={styles.bar}>
+                    <div className={styles.vlaue}></div>
                     </div>
                 </li>
                 </ul>
@@ -77,30 +88,30 @@ const About =() => {
         </div>
 
         <div className={styles.right}>
-    <div className="decoration"></div>
-    <div className="block">
+    <div className={styles.decoration}></div>
+    <div className={styles.block}>
       <h4>Exprience /Work</h4>
       <h2>經歷與作品</h2>
-      <ul>
-        <li className="year">2017
+      <ul className={styles.listExperience}>
+        <li className={styles.year}>2017
           <ul>
             <li>HTC 宏達電子 intern</li>
             <li>手機功能測試</li>
           </ul>
         </li>
-        <li className="year">2018
+        <li className={styles.year}>2018
           <ul>
             <li>Google 美商科高國際有限公司 intern</li>
             <li>手機功能測試</li>
           </ul>
         </li>
-        <li className="year">2019
+        <li className={styles.year}>2019
           <ul>
             <li>MoresTech 賜鴻科技 | RD</li> 
             <li>現有網站維護及新增功能</li>
           </ul>
         </li>
-        <li className="year">2020
+        <li className={styles.year}>2020
           <ul>
             <li>PIXIS 飛泓科技 |FAE Engineer</li>
             <li>客戶系統建置及系統故障排除</li>
@@ -108,7 +119,7 @@ const About =() => {
         </li>
       </ul>
     </div>
-    <div className="block hidden">
+    <div className={styles.year}>
       <h4>contests</h4>
       <h2>比賽經歷</h2>
       <ul>

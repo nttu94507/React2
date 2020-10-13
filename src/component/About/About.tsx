@@ -12,7 +12,7 @@ const About =() => {
             <p>天意照炯，我自獨行，天地雖不容我，心安即是歸處</p>
             <div className={styles.buttons}>
             <a className={`${styles.btn} ${styles.fill}`} href="https://github.com/nttu94507" target="_blank" >作品集</a>
-            <a className={styles.btn} href="https://github.com/nttu94507" target="_blank" >Github</a>
+            <a className={`${styles.btn} ${styles.fill}`} href="https://github.com/nttu94507" target="_blank" >Github</a>
             </div>
             <div className={styles.block}>
             <h4>Skills</h4>
@@ -64,22 +64,22 @@ const About =() => {
                 <ul className={styles.listProgram}>
                 <li>PHP
                     <div className={styles.bar}>
-                    <div className={styles.vlaue}></div>
+                    <div className={`${styles.vlaue} ${styles.p60}`}></div>
                     </div>
                 </li>
                 <li>python
                     <div className={styles.bar}>
-                    <div className={styles.vlaue}></div>
+                    <div className={`${styles.vlaue} ${styles.p20}`}></div>
                     </div>
                 </li>
                 <li>html/css/js
                     <div className={styles.bar}>
-                    <div className={styles.vlaue}></div>
+                    <div className={`${styles.vlaue} ${styles.p80}`}></div>
                     </div>
                 </li>
                 <li>CCNA
                     <div className={styles.bar}>
-                    <div className={styles.vlaue}></div>
+                    <div className={`${styles.vlaue} ${styles.p70}`}></div>
                     </div>
                 </li>
                 </ul>
@@ -93,10 +93,16 @@ const About =() => {
       <h4>Exprience /Work</h4>
       <h2>經歷與作品</h2>
       <ul className={styles.listExperience}>
-        <li className={styles.year}>2017
+      <li className={styles.year}>2020
           <ul>
-            <li>HTC 宏達電子 intern</li>
-            <li>手機功能測試</li>
+            <li>PIXIS 飛泓科技 |FAE Engineer</li>
+            <li>客戶系統建置及系統故障排除</li>
+          </ul> 
+        </li>
+        <li className={styles.year}>2019
+          <ul>
+            <li>MoresTech 賜鴻科技 | RD</li> 
+            <li>現有網站維護及新增功能</li>
           </ul>
         </li>
         <li className={styles.year}>2018
@@ -105,21 +111,15 @@ const About =() => {
             <li>手機功能測試</li>
           </ul>
         </li>
-        <li className={styles.year}>2019
+        <li className={styles.year}>2017
           <ul>
-            <li>MoresTech 賜鴻科技 | RD</li> 
-            <li>現有網站維護及新增功能</li>
+            <li>HTC 宏達電子 intern</li>
+            <li>手機功能測試</li>
           </ul>
-        </li>
-        <li className={styles.year}>2020
-          <ul>
-            <li>PIXIS 飛泓科技 |FAE Engineer</li>
-            <li>客戶系統建置及系統故障排除</li>
-          </ul> 
         </li>
       </ul>
     </div>
-    <div className={styles.year}>
+    <div className={styles.hidden}>
       <h4>contests</h4>
       <h2>比賽經歷</h2>
       <ul>

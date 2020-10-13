@@ -9,7 +9,7 @@ import styles from '../../index.scss'
 
 const Main =() =>(
     <div>
-        <div className={styles.title}>
+        <div className={styles.hidden}>
         <ul >
             <li><Link to="/" data-testid="homeLink">首頁</Link></li>
             <li><Link to="/todolist" data-testid="todolistLink">待辦事項</Link></li>

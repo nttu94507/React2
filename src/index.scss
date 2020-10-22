@@ -1,12 +1,29 @@
     *{
-      // border: solid 1px black; 
+      border: solid 2px black; 
       font-family: 微軟正黑體;
+    }
+
+    @mixin size ($w,$h:$w){
+      width: $w;
+    }
+
+    @mixin flexCenter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     
     .mainBlock {
       max-width:1500px;
     }
+
+    html{
+      @include size(100%);
+      @include flexCenter();
+    }
     body{
+      @include size(100%);
+      @include flexCenter();
       // max-width:1500px;
       padding:50px;
       display:flex;
@@ -261,3 +278,17 @@
         background-color: #FF7168;
       }
     }
+
+    .hidde{
+      display: none;
+    }
+
+
+
+
+
+    /*css 動畫基礎 */
+    
+
+    
+    

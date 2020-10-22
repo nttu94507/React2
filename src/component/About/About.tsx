@@ -10,11 +10,11 @@ const About =() => {
             <h4>飛泓科技 | 技術服務工程師</h4>
             <hr />
             <p>天意照炯，我自獨行，天地雖不容我，心安即是歸處</p>
-            <div className={styles.buttons}>
+            <div >
             <a className={`${styles.btn} ${styles.fill}`} href="https://github.com/nttu94507" target="_blank" >作品集</a>
             <a className={`${styles.btn} ${styles.fill}`} href="https://github.com/nttu94507" target="_blank" >Github</a>
             </div>
-            <div className={styles.block}>
+            <div >
             <h4>Skills</h4>
             <h2>專業技能</h2>
             <ul className={styles.listSkill}>
@@ -58,7 +58,7 @@ const About =() => {
                 程式問題修復及追蹤
                 </li>
             </ul>
-            <div className={styles.block}>
+            <div >
                 <h4>programming Skill</h4>
                 <h2>程式技能</h2>
                 <ul className={styles.listProgram}>
@@ -89,29 +89,29 @@ const About =() => {
 
         <div className={styles.right}>
     <div className={styles.decoration}></div>
-    <div className={styles.block}>
+    <div >
       <h4>Exprience /Work</h4>
       <h2>經歷與作品</h2>
       <ul className={styles.listExperience}>
-      <li className={styles.year}>2020
+      <li >2020
           <ul>
             <li>PIXIS 飛泓科技 |FAE Engineer</li>
             <li>客戶系統建置及系統故障排除</li>
           </ul> 
         </li>
-        <li className={styles.year}>2019
+        <li >2019
           <ul>
             <li>MoresTech 賜鴻科技 | RD</li> 
             <li>現有網站維護及新增功能</li>
           </ul>
         </li>
-        <li className={styles.year}>2018
+        <li >2018
           <ul>
             <li>Google 美商科高國際有限公司 intern</li>
             <li>手機功能測試</li>
           </ul>
         </li>
-        <li className={styles.year}>2017
+        <li >2017
           <ul>
             <li>HTC 宏達電子 intern</li>
             <li>手機功能測試</li>

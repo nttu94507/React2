@@ -14,7 +14,6 @@ ReactDom.render(
         <HashRouter>
             <div className={styles.mainBlock}>
                 <Main />
-                {/* <App /> */}
             </div>
         </HashRouter>
     </Provider> 

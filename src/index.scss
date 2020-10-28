@@ -1,5 +1,5 @@
     *{
-      border: solid 2px black; 
+      // border: solid 2px black; 
       font-family: 微軟正黑體;
     }
 
@@ -17,10 +17,7 @@
       max-width:1500px;
     }
 
-    html{
-      @include size(100%);
-      @include flexCenter();
-    }
+    
     body{
       @include size(100%);
       @include flexCenter();
@@ -28,7 +25,7 @@
       padding:50px;
       display:flex;
       justify-content:center;
-      background-color: #4F9D9D;
+      background-color: #58B2DC;
       //#FF9966
       color:rgba(255,255,255,0.95);
       font-size: 15px;
@@ -119,7 +116,7 @@
     .decoration{
       width: 300px;
       height: 140px;
-      background: linear-gradient(135deg,#FF5F5F,#FFFFAE);
+      background: linear-gradient(135deg,#FFDD71,#58B2DC);
       border-radius: 70px 0px 0px 70px ;
       position: absolute;
       right: 0;
@@ -132,15 +129,15 @@
     }
 
     .listExperience>li:nth-child(4) ul{
-      border-color: #FF7168;
+      border-color: #FFDD71;
     }
 
     .listExperience>li:nth-child(3) ul{
-      border-color: #FFA582;
+      border-color: #ffddff;
     }
 
     .listExperience>li:nth-child(2) ul{
-      border-color: #FFB087;
+      border-color: #ffddef;
     }
 
     .listExperience>li:nth-child(1) ul{
@@ -284,11 +281,93 @@
     }
 
 
-
+    .scene{
+      display: none;
+    }
 
 
     /*css 動畫基礎 */
-    
 
+    $colorBlue: #307BE1;
+    $colorDeepBlue: #2F4A6E;
+    $colorYellow: #FFC12C;
+    $colorOrange: #F38A0c;
+    $colorShadow: rgba(black,0.1);
+    $shadowInset: inset -10px -10px 0px $colorShadow;
+    
+    @mixin bdrsRect($w,$h,$bdrs:$h/2) {
+      width: $w;
+      height: $h;
+      border-radius: $bdrs;
+    }
+
+    @mixin hair($w,$h) {
+      @include bdrsRect($w,$h);
+      box-shadow: $shadowInset;
+      background-color: #fff;
+      position: relative;
+    }
+    
+    .scene{
+      @include flexCenter();
+      @include size(600px,500px);
+      background-color: $colorBlue;
+    }
+
+    .person{
+      .hairs{
+      
+        .hair1{
+          @include hair(150px,80px);
+          margin-left: 10PX;
+          position: relative;
+          // z-index: 500;
+        }
+        .hair2{
+          @include hair(150px,60px);
+          margin-left:50px;
+          margin-top: -40px;
+        }
+        .hair3{
+          @include hair(150px,70px);
+          margin-left: 5px;
+          margin-top: -45px;
+        }
+      }
+    .body{
+      @include bdrsRect(210px, 120px,40px);
+      padding-top:50px;
+      margin-top: -40xp;
+      background-color: $colorYellow;
+      box-shadow: $shadowInset;
+    .eyes{
+      .eye{
+        @include bdrsRect(50px,25px);
+        display: inline-block;
+        margin-right: 5px;
+        margin-left: 15px;
+        background-color: white;
+        .eyeball{
+          @include bdrsRect(25px,25px);
+          background-color: $colorDeepBlue;
+        }
+      }
+    }
+    .mouth{
+      @include bdrsRect(70px, 25px);
+      margin-top:15px;
+      margin-left: 70px;
+      background-color: $colorOrange;
+      .food{
+        @include bdrsRect(12px, 12px);
+        margin-left: -40px;
+        background-color: $colorOrange;
+      }
+
+    }
+  }
+}
+    
+    
     
     

@@ -7,14 +7,15 @@ import Main from './component/Main'
 import styles from './index.scss'
 import App from './component/App'
 import MessageList from './component/MessageList'
+import Pos from './component/Pos'
+import Header from './component/Header'
 
 
 ReactDom.render(
     <Provider store={store}>
         <HashRouter>
-            <div className={styles.mainBlock}>
-                <Main />
-            </div>
+            <Header/>
+            <Main />
         </HashRouter>
     </Provider> 
 , document.getElementById('root'));

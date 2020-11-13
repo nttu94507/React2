@@ -1,7 +1,15 @@
     *{
       // border: solid 2px black; 
-      font-family: 微軟正黑體;
+      font-family: '微軟正黑體';
     }
+
+    // @font-face{
+    //   font-family: 'designpoppop';
+    //   src: url('./assets/fonts/CPFont.ttf');
+    // }
+
+  
+    /* about */
 
     @mixin size ($w,$h:$w){
       width: $w;
@@ -10,11 +18,18 @@
     @mixin flexCenter {
       display: flex;
       justify-content: center;
-      align-items: center;
+      // align-items: center;
     }
     
-    .mainBlock {
+    .mainBlock{
       max-width:1500px;
+    }
+    
+    .container{
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      height: 100%;
     }
 
     
@@ -22,16 +37,21 @@
       @include size(100%);
       @include flexCenter();
       // max-width:1500px;
-      padding:50px;
+      // padding:50px;
       display:flex;
       justify-content:center;
-      background-color: #58B2DC;
+      background-color:	#ffe8d7;
       //#FF9966
-      color:rgba(255,255,255,0.95);
+      color:rgba(0, 0, 0, 0.95);
       font-size: 15px;
       line-height: 28px;
       letter-spacing: 1px;
+      margin: 0px;
     }
+    body>div{
+      width: 100%;
+    }
+
     div{
         width: vx;
     }
@@ -88,6 +108,7 @@
      border:solid 8px white;
      padding: 50px;
      position: relative;
+     align-items: center;
     }
     .left{
       flex:5;
@@ -363,11 +384,9 @@
         margin-left: -40px;
         background-color: $colorOrange;
       }
-
     }
   }
 }
-    
     
     
     

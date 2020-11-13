@@ -1,4 +1,5 @@
 export const mainBlock: string;
+export const container: string;
 export const title: string;
 export const zone: string;
 export const resume: string;

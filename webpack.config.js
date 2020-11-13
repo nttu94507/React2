@@ -43,6 +43,8 @@ module.exports = {
                   }
                 ],
             },
+            { test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
+              loader: 'url-loader'},
         ],
     },
     plugins: [
@@ -56,6 +58,6 @@ module.exports = {
     },
     resolve: { 
       extensions: 
-      ['.js', '.jsx', '.ts' , '.tsx'] 
+      ['.js', '.jsx', '.ts' , '.tsx','.jpg'] 
     },
 };

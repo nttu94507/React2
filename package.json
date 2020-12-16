@@ -12,7 +12,7 @@
     "test-cov": "jest --coverage",
     "tsm": "tsm src --watch",
     "cypress:open": "cypress open",
-    "depoly": "firebase deploy"
+    "deploy": "firebase deploy"
   },
   "keywords": [],
   "author": "",

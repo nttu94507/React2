@@ -22,7 +22,7 @@ const About =() => {
                 <div className={styles.circle}>
                   <div className={styles.p90}></div>
                 </div>
-                前端網頁開發(html/css/js)
+                前端網頁開發
                 </li>
                 <li>
                 <div className={styles.circle}>
@@ -37,21 +37,21 @@ const About =() => {
                   <div className={styles.p180}></div>
                   <div className={styles.p270}></div>
                 </div>  
-                後端網頁(Laravel)
+                後端網頁
                 </li>
                 <li>
                 <div className={styles.circle}>
                 <div className={styles.p360}></div>
                 </div>
-                網路規劃(CCNA)
+                網路規劃
                 </li>
                 <li>
                 <div className={styles.circle}></div>
-                網站品質測試(QA)
+                網站品質測試
                 </li>
                 <li>
                 <div className={styles.circle}></div>
-                前端框架(React.js)
+                前端框架
                 </li>
                 <li>
                 <div className={styles.circle}></div>
@@ -86,8 +86,7 @@ const About =() => {
             </div>
             </div>
         </div>
-
-        <div className={styles.right}>
+    <div className={styles.right}>
     <div className={styles.decoration}></div>
     <div >
       <h4>Exprience /Work</h4>

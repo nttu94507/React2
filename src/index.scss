@@ -29,7 +29,7 @@
       display: flex;
       justify-content: center;
       // align-items: center;
-      height: 100%;
+      // height: 100%;
     }
 
     
@@ -40,7 +40,7 @@
       // padding:50px;
       display:flex;
       justify-content:center;
-      background-color:	#ffe8d7;
+      background-color:	rgb(192, 192, 192);
       //#FF9966
       color:rgba(0, 0, 0, 0.95);
       font-size: 15px;
@@ -111,10 +111,10 @@
      align-items: center;
     }
     .left{
-      flex:5;
+      flex:7;
     }
     .right{
-      flex:7;
+      flex:5;
     }
     .left,.right{
       padding:15px;
@@ -125,7 +125,8 @@
     }
     .right{
       padding-left:50px;
-      padding-top: 150px;
+      margin-top: 180px;
+      height: 100%;
     }
     
     /* dev class */

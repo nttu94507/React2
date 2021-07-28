@@ -2,19 +2,21 @@ import React from 'react'
 import styles from '../Header/Header.scss'
 import { Switch, Route ,Link} from 'react-router-dom'
 import { right } from '../../index.scss'
+import  photo1  from '../../media/poppop.jpg'
+
 
 
 const Header = () =>{
     return(
         <div className={`${styles.header}`}>
             <div className={`${styles.headerLeft}`}>
-                
+            <img src={photo1} alt="designpoppop"/>
             </div>
         <div className={`${styles.headerRight}`}>        
             <div className={`${styles.headerContainer}`}>
                 <ul className={`${styles.headerContainer} ${styles.ul}`}>    
                 <Link to="/" data-testid="homeLink" >
-                    {/* <img src="https://i.imgur.com/y1Wr1af.png" alt="designpoppop"/> */}
+                    
                     <li className={styles.flex1}>首頁</li></Link>
 
                 <Link to="/todolist" data-testid="todolistLink"><li className={styles.flex1}>產品</li></Link>

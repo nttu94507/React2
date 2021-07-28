@@ -44,7 +44,19 @@ module.exports = {
                 ],
             },
             { test: /\.(eot|svg|ttf|woff|woff2|otf)$/,
-              loader: 'url-loader'},
+              loader: 'url-loader'
+            },
+            {
+              test: /\.(png|jpe?g|gif)$/i,
+              use: [
+                {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[sha512:hash:base64:7].[ext]',
+                  },
+                },
+              ],
+            },
         ],
     },
     plugins: [
@@ -58,6 +70,6 @@ module.exports = {
     },
     resolve: { 
       extensions: 
-      ['.js', '.jsx', '.ts' , '.tsx','.jpg'] 
+      ['.js', '.jsx', '.ts' , '.tsx','.jpg','.png'] 
     },
 };

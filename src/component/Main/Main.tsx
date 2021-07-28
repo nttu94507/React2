@@ -15,10 +15,10 @@ const Main =() =>(
         <div className={styles.container}>
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/content' component={Content} />
+                <Route path='/content' component={Content} />
                 <Route path='/todolist' component={todo} />
                 <Route path='/list/:taskName' component={List} />
-                <Route exact path='/about' component={About} />
+                <Route path='/about' component={About} />
             </Switch>
         </div>
     </div>
